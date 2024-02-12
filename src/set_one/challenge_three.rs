@@ -18,8 +18,10 @@ pub fn brute_force_single_byte_xor(input: &[u8]) -> Result<Vec<(String, u8, f64)
             .map(|x| (x ^ i) as char)
             .collect::<Vec<char>>();
 
-        let s = chi2(&decoded);
-        out.push((decoded, i, s));
+        if !decoded.is_empty() {
+            let s = chi2(&decoded);
+            out.push((decoded, i, s));
+        }
     }
 
     out.sort_by(|(_, _, x), (_, _, y)| x.partial_cmp(y).unwrap());
