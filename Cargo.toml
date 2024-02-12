@@ -10,7 +10,7 @@ itertools = "0.12.1"
 
 aes = "0.8.3"
 ecb = { version = "0.1.2", features = ["alloc"] }
+rand = "0.8.5"
 
-# For tests
 [dev-dependencies]
 base64 = "0.21.7"
