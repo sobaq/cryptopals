@@ -1,0 +1,13 @@
+[package]
+name = "cryptopals"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+automod = "1.0.14"
+eyre = "0.6.12"
+itertools = "0.12.1"
+
+# For tests
+[dev-dependencies]
+base64 = "0.21.7"
