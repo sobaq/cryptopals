@@ -1,6 +1,6 @@
 use std::iter;
 
-/// Pads `input` to a multiple of `block_size`
+/// Pads `input` to a multiple of `block_size` bytes.
 pub fn pad_pkcs7(input: &[u8], block_size: usize) -> Vec<u8> {
     let mut t = input.to_vec();
     let req = block_size - input.len() % block_size;
