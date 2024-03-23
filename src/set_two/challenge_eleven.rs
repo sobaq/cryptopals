@@ -79,6 +79,10 @@ pub fn encrypt_randomly(data: &[u8]) -> (EncryptionType, Vec<u8>) {
     }
 }
 
+/// Identifies whether a given block of encrypted data was encrypted in
+/// ECB or CBC mode.
+/// The given input MUST have been computed from an input containing a
+/// repeating pattern _at least_ three blocks' width.
 pub fn guess_ecb_or_cbc(input: &[u8]) -> EncryptionType {
     // Guess by getting windows into input from the beginning and from a 
     // one block offset. If, at any index (to account for the random amount

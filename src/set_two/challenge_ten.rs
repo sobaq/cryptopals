@@ -13,7 +13,7 @@ pub fn decode_aes_cbc(
         .flat_map(|block_num| {
             let prev = &ciphertext_blocks[block_num - 1];
             let curr = &ciphertext_blocks[block_num];
-    
+
             // Decrypt in place
             let mut dec = GenericArray::clone_from_slice(curr);
             aes.decrypt_block(&mut dec);

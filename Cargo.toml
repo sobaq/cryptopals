@@ -7,7 +7,6 @@ edition = "2021"
 automod = "1.0.14"
 eyre = "0.6.12"
 itertools = "0.12.1"
-
 aes = "0.8.3"
 ecb = { version = "0.1.2", features = ["alloc"] }
 rand = "0.8.5"
